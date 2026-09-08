@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impressum – Zimmerei Weberhof Ingelfingen</title>
+<meta name="description" content="Impressum der Zimmerei Weberhof GmbH, Holzäckerstraße 8, 74653 Ingelfingen.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%237A4A21'/%3E%3Ctext x='50' y='69' font-size='56' font-family='Georgia,serif' fill='%23F4F1EC' text-anchor='middle'%3EW%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ---------- Grundlagen ---------- */
+:root{
+  --bg:#F4F1EC;
+  --text:#1C1917;
+  --text-soft:#4a423c;
+  --muted:#6b6058;
+  --accent:#7A4A21;
+  --accent-dark:#5f3a19;
+  --dark:#2A2724;
+  --border:#DDD6CC;
+  --serif:'Fraunces', Georgia, serif;
+  --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+*{ box-sizing:border-box; }
+html{ scroll-behavior:smooth; overflow-x:hidden; }
+body{ margin:0; background:var(--bg); color:var(--text); font-family:var(--sans); font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+img{ max-width:100%; display:block; }
+a{ color:inherit; }
+.container{ max-width:1240px; margin:0 auto; padding:0 24px; }
+@media (min-width:768px){ .container{ padding:0 40px; } }
+
+h1,h2,h3,h4{ font-family:var(--serif); font-weight:600; line-height:1.15; margin:0 0 0.5em; letter-spacing:-0.01em; }
+h1{ font-size:clamp(2.2rem,5vw,3.5rem); font-weight:500; }
+h2{ font-size:clamp(1.8rem,3.2vw,2.4rem); }
+h3{ font-size:1.35rem; }
+p{ margin:0 0 1em; max-width:62ch; }
+.lede{ font-size:1.1rem; color:var(--text-soft); max-width:52ch; }
+
+.label{ font-size:13px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--accent); display:inline-block; margin-bottom:0.9em; }
+
+.skip-link{ position:absolute; left:-999px; top:auto; background:#fff; color:var(--text); padding:12px 18px; z-index:200; border:1px solid var(--border); }
+.skip-link:focus{ left:16px; top:16px; }
+a:focus-visible, button:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; }
+.demo-banner{ background:var(--dark); color:rgba(255,255,255,0.88); text-align:center; font-size:13px; line-height:1.5; padding:10px 20px; }
+
+/* ---------- Buttons ---------- */
+.btn{ display:inline-block; padding:15px 30px; font-family:var(--sans); font-weight:600; font-size:15px; text-decoration:none; border-radius:2px; border:1.5px solid transparent; cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease; }
+.btn-filled{ background:var(--accent); color:#F9F6F1; border-color:var(--accent); }
+.btn-filled:hover{ background:var(--accent-dark); border-color:var(--accent-dark); }
+.btn-outline{ background:transparent; color:var(--text); border-color:var(--text); }
+.btn-outline:hover{ background:var(--text); color:var(--bg); }
+.btn-row{ display:flex; gap:16px; flex-wrap:wrap; }
+
+/* ---------- Header ---------- */
+.site-header{ position:sticky; top:0; z-index:50; background:rgba(244,241,236,0.97); backdrop-filter:blur(6px); border-bottom:1px solid var(--border); }
+.header-inner{ display:flex; align-items:center; justify-content:space-between; height:76px; }
+.logo{ font-family:var(--serif); font-size:1.4rem; font-weight:600; text-decoration:none; color:var(--text); letter-spacing:-0.01em; white-space:nowrap; }
+.logo-accent{ color:var(--accent); }
+.main-nav ul{ list-style:none; display:flex; gap:36px; margin:0; padding:0; }
+.main-nav a{ text-decoration:none; font-size:15px; font-weight:500; color:var(--text); padding:4px 0; border-bottom:1.5px solid transparent; }
+.main-nav a:hover, .main-nav a[aria-current="page"]{ border-color:var(--accent); }
+.header-actions{ display:flex; align-items:center; gap:28px; }
+.header-phone{ font-weight:600; text-decoration:none; font-size:15px; white-space:nowrap; }
+.nav-toggle{ display:none; background:none; border:none; width:32px; height:24px; position:relative; cursor:pointer; padding:0; flex-shrink:0; }
+.nav-toggle span{ position:absolute; left:0; width:100%; height:2px; background:var(--text); transition:transform .2s ease, opacity .2s ease; }
+.nav-toggle span:nth-child(1){ top:2px; }
+.nav-toggle span:nth-child(2){ top:11px; }
+.nav-toggle span:nth-child(3){ top:20px; }
+.nav-toggle.is-open span:nth-child(1){ transform:translateY(9px) rotate(45deg); }
+.nav-toggle.is-open span:nth-child(2){ opacity:0; }
+.nav-toggle.is-open span:nth-child(3){ transform:translateY(-9px) rotate(-45deg); }
+
+@media (max-width:767px){
+  .nav-toggle{ display:block; }
+  .logo-full{ display:none; }
+  .main-nav{ position:fixed; top:76px; left:0; right:0; height:calc(100vh - 76px); background:var(--bg); transform:translateX(100%); transition:transform .25s ease; overflow-y:auto; }
+  .main-nav.is-open{ transform:translateX(0); }
+  .main-nav ul{ flex-direction:column; gap:0; padding:8px 24px 40px; }
+  .main-nav li{ border-bottom:1px solid var(--border); }
+  .main-nav a{ display:block; padding:18px 0; font-size:1.1rem; }
+}
+
+/* ---------- Abschnitte allgemein ---------- */
+.section{ padding:56px 0; }
+@media (min-width:1024px){ .section{ padding:96px 0; } }
+.section-border{ border-top:1px solid var(--border); }
+
+/* ---------- Seiten-Kopf (Unterseiten) ---------- */
+.page-header{ padding:56px 0 48px; border-bottom:1px solid var(--border); }
+@media (min-width:1024px){ .page-header{ padding:80px 0 56px; } }
+.page-header h1{ font-size:clamp(2rem,4.2vw,2.9rem); max-width:820px; }
+
+/* ---------- Rechtstexte ---------- */
+.legal-content{ max-width:760px; }
+.legal-content h2{ font-size:1.4rem; margin-top:2em; }
+.legal-content p, .legal-content li{ color:var(--text-soft); }
+.legal-content ul{ padding-left:20px; }
+.legal-content a{ color:var(--accent); }
+
+/* ---------- Footer ---------- */
+.site-footer{ background:var(--dark); color:rgba(255,255,255,0.85); padding:64px 0 32px; }
+@media (min-width:1024px){ .site-footer{ padding-top:96px; } }
+.footer-grid{ display:grid; grid-template-columns:1fr; gap:40px; }
+@media (min-width:768px){ .footer-grid{ grid-template-columns:1.3fr 1fr 1fr; gap:40px; } }
+.footer-grid h4{ color:#fff; font-family:var(--sans); font-size:14px; text-transform:uppercase; letter-spacing:0.05em; margin-bottom:18px; font-weight:600; }
+.footer-grid ul{ list-style:none; margin:0; padding:0; }
+.footer-grid li{ margin-bottom:10px; color:rgba(255,255,255,0.7); font-size:15px; }
+.footer-grid a{ color:rgba(255,255,255,0.8); text-decoration:none; font-size:15px; }
+.footer-grid a:hover{ color:#fff; }
+.footer-bottom{ border-top:1px solid rgba(255,255,255,0.15); margin-top:56px; padding-top:24px; font-size:13px; color:rgba(255,255,255,0.5); display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; }
+
+@media (prefers-reduced-motion:reduce){
+  html{ scroll-behavior:auto; }
+  *{ transition:none !important; }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+<div class="demo-banner" role="note">Demo-Website &middot; Zimmerei Weberhof ist ein fiktives Beispielunternehmen f&uuml;r Design-Zwecke &mdash; keine echte Firma, keine echten Kontaktdaten.</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html" class="logo"><span class="logo-full">Zimmerei</span> <span class="logo-accent">Weberhof</span></a>
+    <nav class="main-nav" id="hauptnav" aria-label="Hauptnavigation">
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="leistungen.html">Leistungen</a></li>
+        <li><a href="referenzen.html">Referenzen</a></li>
+        <li><a href="ueber-uns.html">Über uns</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:+4979402145" class="header-phone">07940 / 21 45</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="hauptnav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-header">
+    <div class="container">
+      <span class="label">Rechtliches</span>
+      <h1>Impressum</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="legal-content">
+        <h2>Angaben gemäß § 5 TMG</h2>
+        <p>Zimmerei Weberhof GmbH<br>
+        Holzäckerstraße 8<br>
+        74653 Ingelfingen</p>
+
+        <h2>Vertreten durch</h2>
+        <p>Tobias Weber, Geschäftsführer</p>
+
+        <h2>Kontakt</h2>
+        <p>Telefon: <a href="tel:+4979402145">07940 / 21 45</a><br>
+        E-Mail: <a href="mailto:info@zimmerei-weberhof.de">info@zimmerei-weberhof.de</a></p>
+
+        <h2>Registereintrag</h2>
+        <p>Eintragung im Handelsregister.<br>
+        Registergericht: Amtsgericht Stuttgart<br>
+        Registernummer: HRB 738214</p>
+
+        <h2>Umsatzsteuer-ID</h2>
+        <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz: DE 291 837 465</p>
+
+        <h2>Inhaltlich verantwortlich</h2>
+        <p>Tobias Weber<br>
+        Holzäckerstraße 8, 74653 Ingelfingen</p>
+
+        <h2>EU-Streitschlichtung</h2>
+        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit, abrufbar unter <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener">ec.europa.eu/consumers/odr</a>. Unsere E-Mail-Adresse finden Sie oben. Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+        <h2>Haftung für Inhalte</h2>
+        <p>Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.</p>
+
+        <h2>Haftung für Links</h2>
+        <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter verantwortlich. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+
+        <h2>Urheberrecht</h2>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h4>Kontakt</h4>
+        <ul>
+          <li>Zimmerei Weberhof GmbH</li>
+          <li>Holzäckerstraße 8</li>
+          <li>74653 Ingelfingen</li>
+          <li><a href="tel:+4979402145">07940 / 21 45</a></li>
+          <li><a href="mailto:info@zimmerei-weberhof.de">info@zimmerei-weberhof.de</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Seiten</h4>
+        <ul>
+          <li><a href="index.html">Start</a></li>
+          <li><a href="leistungen.html">Leistungen</a></li>
+          <li><a href="referenzen.html">Referenzen</a></li>
+          <li><a href="ueber-uns.html">Über uns</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Rechtliches</h4>
+        <ul>
+          <li><a href="impressum.html">Impressum</a></li>
+          <li><a href="datenschutz.html">Datenschutz</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Zimmerei Weberhof GmbH</span>
+      <span>Ingelfingen · Hohenlohekreis</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle = document.getElementById('navToggle');
+  var nav = document.getElementById('hauptnav');
+  if(!toggle || !nav) return;
+  toggle.addEventListener('click', function(){
+    var isOpen = nav.classList.toggle('is-open');
+    toggle.classList.toggle('is-open', isOpen);
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    toggle.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+  });
+  nav.querySelectorAll('a').forEach(function(link){
+    link.addEventListener('click', function(){
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded', 'false');
+      toggle.setAttribute('aria-label', 'Menü öffnen');
+    });
+  });
+})();
+</script>
+</body>
+</html>
